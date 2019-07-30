@@ -510,6 +510,7 @@ void cnstr_shdsc_aead_givencap(u32 * const desc, struct alginfo *cdata,
 			       const bool is_qi, int era)
 {
 	u32 geniv, moveiv;
+	u32 *wait_cmd;
 
 	/* Note: Context registers are saved. */
 	init_sh_desc_key_aead(desc, cdata, adata, is_rfc3686, nonce, era);
